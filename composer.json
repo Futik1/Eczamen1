@@ -1,0 +1,9 @@
+{
+    "name": "test/test",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "api"
+        }
+    }
+}

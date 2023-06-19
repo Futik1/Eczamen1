@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body * {
+    font-family: Roboto, sans-serif;
+}
+
+img {
+    display: block;
+}
+
+label, input, textarea, form button {
+    display: block;
+}
+
+input, textarea, select {
+    padding: .35rem .75rem;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: .25rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color .5s;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #77b900;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+    transition: all .5s;
+}
+
+a:hover {
+    color: #77b900;
+}
+
+button {
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    transition: background .5s;
+}
+
+button:hover {
+    background: #77b900;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgb(0 0 0 / .25);
+    z-index: 2;
+}
+
+.logo {
+    width: 25%;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 125px;
+    margin: auto;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.contacts img {
+    width: 2rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.user img {
+    width: 2rem ;
+}
+
+.user button.icon {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.user button.icon img {
+    width: 1.5rem;
+}
+
+footer {
+    background: #222425;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p.smaller {
+    font-size: 80%;
+}
+
+footer .contacts .link {
+    background: #fff;
+}
+
+footer .contacts .link:first-child {
+    border-radius: 100%;
+}
+
+#popup_search, #popup_login, #popup_message {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgb(0 0 0 / .5);
+    display: none;
+}
+
+#popup_search.active, #popup_login.active, #popup_message.active {
+    display: flex;
+}
+
+#popup_search .inner_container, #popup_login .inner_container, #popup_message .inner_container {
+    background: #fff;
+    min-width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#popup_search .inner_container form {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#popup_search .inner_container form > div {
+    flex: 1;
+}
+
+#popup_search .result {
+    max-height: 80vh;
+    overflow: auto;
+    padding: 0 1rem;
+}
+
+#popup_search .result .good {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#popup_search .result .good .image {
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
+#popup_search .result .good .text {
+    flex: 1;
+}
+
+#popup_search .result .image img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+#popup_search .result .delete_button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#popup_search .result .price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#popup_search .result .price p {
+    color: #b54848;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#popup_login .inner_container {
+    padding: 1rem;
+}
+
+#popup_login .inner_container label {
+    margin-bottom: .5rem;
+}
+
+#popup_login .inner_container input {
+    margin-bottom: 1.5rem;
+}
+
+#popup_login .inner_container button {
+    display: inline-block;
+}
+
+#popup_message .inner_container p {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .logo img {
+        max-width: 100%;
+        max-height: 60px;
+    }
+
+    .contacts {
+        order: 1;
+        padding: 1rem 0;
+    }
+
+    .user {
+        margin-left: auto;
+    }
+
+    footer {
+        display: block;
+    }
+
+    #popup_search .inner_container, #popup_login .inner_container {
+        width: 90%;
+    }
+
+    #popup_search .inner_container form {
+        display: block;
+    }
+
+    #popup_search .inner_container form > div {
+        margin-bottom: 1rem;
+    }
+
+    #popup_search .result .good {
+        display: block;
+    }
+
+    #popup_search .result .good .image {
+        width: 100%;
+        display: flex;
+    }
+}

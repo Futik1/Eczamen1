@@ -1,0 +1,65 @@
+.login {
+    display: flex;
+    height: 100vh;
+}
+
+#login_form {
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tab {
+    display: none;
+    padding: 0 1rem;
+}
+
+.order, .review, .good {
+    padding: 1rem;
+}
+
+.good {
+    margin: 2rem 0;
+}
+
+.good label {
+    margin-bottom: 1rem;
+}
+
+.good label span {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.good img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.good .note-editor {
+    margin-bottom: 1rem;
+}
+
+.good .specs .spec {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.good .images {
+    display: flex;
+    gap: 1rem;
+}
+
+.good .save_good, .good .delete_good{
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.good .images .image .remove_image {
+    margin-bottom: 1rem;
+}

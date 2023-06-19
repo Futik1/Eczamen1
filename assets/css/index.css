@@ -1,0 +1,115 @@
+main {
+    display: flex;
+    gap: 1rem;
+    padding-left: 300px;
+    padding-right: 1rem;
+    margin-top: 2rem;
+    min-height: calc(100vh - 16.5rem);
+    align-items: flex-start;
+}
+
+.nav_button {
+    display: none;
+}
+
+nav {
+    width: 300px;
+    padding: 1rem;
+    position: fixed;
+    top: 125px;
+    left: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem 1rem;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.goods .good {
+    display: flex;
+    flex-direction: column;
+}
+
+.goods .good:hover img {
+    transform: scale(1.1);
+}
+
+.goods .good .image {
+    max-width: 100%;
+    max-height: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.goods .good .image img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all .5s;
+}
+
+.goods .good p {
+    text-align: center;
+}
+
+.goods .good p.price {
+    margin-bottom: 0;
+    color: #b54848;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.goods .good button {
+    align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav {
+        background: #fff;
+        box-shadow: 2px 2px 2px rgb(0 0 0 / .25);
+        left: -100%;
+        transition: all .5s;
+        z-index: 2;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .nav_button {
+        display: block;
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        top: 135px;
+        left: 10px;
+        background: #fff;
+        border: none;
+        padding: .75rem;
+        box-shadow: 0 0 2px rgba(0 0 0 / .5);
+    }
+
+    .nav_button:hover {
+        background: #fff;
+    }
+
+    .nav_button img {
+        width: 100%;
+    }
+
+    .goods {
+        grid-template-columns: 1fr;
+    }
+}
